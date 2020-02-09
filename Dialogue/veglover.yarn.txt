@@ -1,0 +1,51 @@
+title: Veg Lover
+tags: 
+colorID: 0
+position: 521,99
+---
+<<if visited("Veg Lover") is false>>
+<<setsprite VegLover smile>>
+Veg Lover: Hey! Am I glad to see you!
+<<setsprite VegLover sad>>
+Veg Lover: I really want one of those vegetables the farmer has there, but I'm not programmed to be able to move to get one. 
+<<setsprite VegLover smile>>
+Veg Lover: Can you go get one for me?
+<<setsprite Player neutral>>
+[[Sure whatever|SureWhatever]]
+[[I'm busy|ImBusy]]
+<<elseif visited("Veg Lover") is true and $veg_quest is false>>
+<<setsprite VegLover smile>>
+Veg Lover: Hey! Did you change your mind about grabbing me a sweet tasty vegetable?
+<<setsprite Player neutral>>
+[[Sure whatever|SureWhatever]]
+[[I'm busy|ImBusy]]
+<<elseif visited("Veg Lover") is true and $veg_quest is true>>
+    <<if $taken_veg is true>>
+    <<setsprite VegLover happy>>
+    Veg Lover: Hey! You got one! Thanks.
+    <<giveitem Inventory Vegetable>>
+    <<else>>
+    <<setsprite VegLover smile>>
+    Veg Lover: Yep, still just hanging out here waiting!
+    <<endif>>
+<<endif>>
+===
+title: SureWhatever
+tags: 
+colorID: 0
+position: 306,378
+---
+<<set $veg_quest to true>>
+<<setsprite VegLover happy>>
+Veg Lover: Really? Thanks! I'll wait right here. 
+<<setsprite VegLover sad>>
+Veg Lover: Not like I have much choice after all. 
+===
+title: ImBusy
+tags: 
+colorID: 0
+position: 755,372
+---
+<<setsprite VegLover sad>>
+VegLover: Aw, come on! What else is there to do around here?
+===

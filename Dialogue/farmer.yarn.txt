@@ -1,0 +1,23 @@
+title: Farmer
+tags: 
+colorID: 0
+position: 533,222
+---
+<<if $taken_veg is false>>
+<<setsprite Farmer eyesclosed>>
+Farmer: I walk up and down this tiny farm daily, checking on vegetables that never change? 
+Farmer: Will someone explain what is happening? Is this good? Or is their unchanging status bad? I feel lost.  
+Farmer: Perhaps I should just accept it as a sign I am the best farmer ever.
+    <<if $veg_quest is true>>
+    <<setsprite Farmer surprise>>
+    Farmer: ...A vegetable? All yours, if you come back soon.
+    <<endif>>
+<<elseif $taken_veg is true and visited("Farmer") is false>>
+<<setsprite Farmer smile>>
+Farmer: It's good to see you, my friend. 
+<<setsprite Farmer angry>>
+Farmer: ...Is what I might say, had I ever met you before, aside from watching you take my crops without asking. 
+<<setsprite Farmer eyesclosed>>
+Farmer: Asking is free, you know.
+<<endif>>
+===

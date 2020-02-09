@@ -1,0 +1,32 @@
+[
+	{
+		"title": "Veg Lover",
+		"tags": "",
+		"body": "<<if visited(\"Veg Lover\") is false>>\n<<setsprite VegLover smile>>\nVeg Lover: Hey! Am I glad to see you!\n<<setsprite VegLover sad>>\nVeg Lover: I really want one of those vegetables the farmer has there, but I'm not programmed to be able to move to get one. \n<<setsprite VegLover smile>>\nVeg Lover: Can you go get one for me?\n<<setsprite Player neutral>>\n[[Sure whatever|SureWhatever]]\n[[I'm busy|ImBusy]]\n<<elseif visited(\"Veg Lover\") is true and $veg_quest is false>>\n<<setsprite VegLover smile>>\nVeg Lover: Hey! Did you change your mind about grabbing me a sweet tasty vegetable?\n<<setsprite Player neutral>>\n[[Sure whatever|SureWhatever]]\n[[I'm busy|ImBusy]]\n<<elseif visited(\"Veg Lover\") is true and $veg_quest is true>>\n    <<if $taken_veg is true>>\n    <<setsprite VegLover happy>>\n    Veg Lover: Hey! You got one! Thanks.\n    <<giveitem Inventory Vegetable>>\n    <<else>>\n    <<setsprite VegLover smile>>\n    Veg Lover: Yep, still just hanging out here waiting!\n    <<endif>>\n<<endif>>",
+		"position": {
+			"x": 521,
+			"y": 99
+		},
+		"colorID": 0
+	},
+	{
+		"title": "SureWhatever",
+		"tags": "",
+		"body": "<<set $veg_quest to true>>\n<<setsprite VegLover happy>>\nVeg Lover: Really? Thanks! I'll wait right here. \n<<setsprite VegLover sad>>\nVeg Lover: Not like I have much choice after all. ",
+		"position": {
+			"x": 306,
+			"y": 378
+		},
+		"colorID": 0
+	},
+	{
+		"title": "ImBusy",
+		"tags": "",
+		"body": "<<setsprite VegLover sad>>\nVegLover: Aw, come on! What else is there to do around here?",
+		"position": {
+			"x": 755,
+			"y": 372
+		},
+		"colorID": 0
+	}
+]

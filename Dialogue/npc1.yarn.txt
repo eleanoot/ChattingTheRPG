@@ -1,0 +1,15 @@
+title: Start
+tags: 
+colorID: 0
+position: 533,222
+---
+<<setsprite Blonde sad>>
+Blonde: Boy I sure do love standing outside an inn. 
+Blonde: It's great.
+Blonde: What am I doing with my life? 
+<<setsprite Player neutral>>
+-> Your best. 
+    <<setsprite Blonde wink>>God you're optimistic. 
+-> Good question.
+    <<setsprite Blonde wink>>Ain't it just.
+===

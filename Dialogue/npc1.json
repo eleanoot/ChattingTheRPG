@@ -1,0 +1,12 @@
+[
+	{
+		"title": "Start",
+		"tags": "",
+		"body": "<<setsprite Blonde sad>>\nBlonde: Boy I sure do love standing outside an inn. \nBlonde: It's great.\nBlonde: What am I doing with my life? \n<<setsprite Player neutral>>\n-> Your best. \n    <<setsprite Blonde wink>>God you're optimstic. \n-> Good question.\n    <<setsprite Blonde wink>>Ain't it just.",
+		"position": {
+			"x": 533,
+			"y": 222
+		},
+		"colorID": 0
+	}
+]

@@ -1,0 +1,12 @@
+[
+	{
+		"title": "Farmer",
+		"tags": "",
+		"body": "<<if $taken_veg is false>>\n<<setsprite Farmer eyesclosed>>\nFarmer: I walk up and down this tiny farm daily, checking on vegetables that never change? \nFarmer: Will someone explain what is happening? Is this good? Or is their unchanging status bad? I feel lost.  \nFarmer: Perhaps I should just accept it as a sign I am the best farmer ever.\n    <<if $veg_quest is true>>\n    <<setsprite Farmer surprise>>\n    Farmer: ...A vegetable? All yours, if you come back soon.\n    <<endif>>\n<<elseif $taken_veg is true and visited(\"Farmer\") is false>>\n<<setsprite Farmer smile>>\nFarmer: It's good to see you, my friend. \n<<setsprite Farmer angry>>\nFarmer: ...Is what I might say, had I ever met you before, aside from watching you take my crops without asking. \n<<setsprite Farmer eyesclosed>>\nFarmer: Asking is free, you know.\n<<endif>>",
+		"position": {
+			"x": 533,
+			"y": 222
+		},
+		"colorID": 0
+	}
+]
